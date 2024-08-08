@@ -29,6 +29,24 @@ class _SideMenuState extends State<SideMenu> {
     super.initState();
   }
 
+  logout() {
+    if (sharedPref.getString("pass") != null) {
+      return MaterialButton(
+        color: colorwhite,
+        onPressed: () async {
+          sharedPref.clear();
+          Navigator.of(context).pushReplacementNamed('op');
+        },
+        child: Text(
+          'تسجيل الخروج',
+          style: TextStyle(color: bgColor),
+        ),
+      );
+    } else {
+      return const SizedBox();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,18 +175,7 @@ class _SideMenuState extends State<SideMenu> {
                           ),
                         ),
                         const Translation(),
-                        MaterialButton(
-                          color: colorwhite,
-                          onPressed: () async {
-                            sharedPref.clear();
-                            // ignore: use_build_context_synchronously
-                            Navigator.of(context).pushReplacementNamed('op');
-                          },
-                          child: Text(
-                            'تسجيل الخروج',
-                            style: TextStyle(color: bgColor),
-                          ),
-                        ),
+                        logout(),
                         const Spacer(),
                         Text(
                           "جامعة سرت | الحقوق محفوظة © ${DateTime.now().year}",
