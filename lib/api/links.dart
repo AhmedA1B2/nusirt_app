@@ -32,13 +32,11 @@ const String linkEndhgz = "$linkServerName/hgzmktbh/admin/end.php";
 
 //||--> End Libary <--||//
 
-/*
-const String linkServerName = "http://192.168.0.108/mydatabase";
+//||--> Mark <--||//
 
-//Auth
+const String linkAddMark = "$linkServerName/n_exam/add.php";
+const String linkEditMark = "$linkServerName/n_exam/up.php";
+const String linkViewteMark = "$linkServerName/n_exam/view_t.php";
+const String linkViewStMark = "$linkServerName/n_exam/view_s.php";
 
-const String linkLogin = "$linkServerName/auth_s/login.php";
-const String linkViewStudent = "$linkServerName/auth_s/view.php";
-const String linkExamStudent = "$linkServerName/auth_s/exam.php";
-
-*/
+//||--> End Mark <--||//
