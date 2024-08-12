@@ -13,7 +13,7 @@ class ButtonOpLog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       butext,
-      style:  TextStyle(
+      style: TextStyle(
         color: colorwhite,
         fontSize: 24,
       ),
