@@ -46,8 +46,16 @@ class _InMarkState extends State<InMark> {
       isLoding = false;
       setState(() {});
       if (response['status'] == "success") {
-        // ignore: use_build_context_synchronously
-        Navigator.of(context).pushNamedAndRemoveUntil("mark", (route) => false);
+        conNum.text = "";
+        conAmly.text = "";
+        conNasfy.text = "";
+        AwesomeDialog(
+          context: context,
+          dialogType: DialogType.success,
+          animType: AnimType.rightSlide,
+          title: ':)',
+          desc: "تم الادخال",
+        ).show();
       }
     }
   }

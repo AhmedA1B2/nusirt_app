@@ -9,8 +9,8 @@ import 'package:sirte_university/custom/home_screen/app_home_loged_t.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/custom/library/library.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/more_st.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/personal_screen_s.dart';
-import 'package:sirte_university/custom/home_screen/widget/logedin_t/mark_view/mark.dart';
-import 'package:sirte_university/custom/home_screen/widget/logedin_t/mark_view/widget/input/in_mark.dart';
+import 'package:sirte_university/custom/online_lectures/mark_view/mark.dart';
+import 'package:sirte_university/custom/online_lectures/mark_view/widget/input/in_mark.dart';
 import 'package:sirte_university/custom/login_screen/s_login/custom_login.dart';
 import 'package:sirte_university/custom/login_screen/options_to_login.dart';
 import 'package:sirte_university/custom/online_lectures/online_lecture.dart';
@@ -346,7 +346,7 @@ class _MyAppState extends State<MyApp> {
     SizeConfig().init(context);
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Rubik'),
-      home: const OnlineLecture(),
+      home: const Welcome(), 
       routes: {
         "logn": (context) => const LoginForm(),
         "home": (context) => const HomeScreen(),
@@ -357,6 +357,7 @@ class _MyAppState extends State<MyApp> {
         "libary": (context) => const Library(),
         "MoreSt": (context) => const MoreSt(),
         "PersonalScreenS": (context) => const PersonalScreenS(),
+        "lecture": (context) => const OnlineLecture(),
         "mark": (context) => const Mark(),
         "inMark": (context) => const InMark()
       },

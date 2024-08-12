@@ -24,11 +24,15 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 
     animationController?.repeat(reverse: true);
 
-    if (sharedPref.getString("num") == null) {
+    if (sharedPref.getString("num") == null ||
+        sharedPref.getString("emil") == null) {
       ogToOp();
     }
     if (sharedPref.getString("num") != null) {
       ogToHome();
+    }
+    if (sharedPref.getString("emil") != null) {
+      ogToHomeTe();
     }
   }
 
@@ -70,6 +74,12 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   void ogToHome() {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacementNamed("homes");
+    });
+  }
+
+  void ogToHomeTe() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacementNamed("homet");
     });
   }
 }

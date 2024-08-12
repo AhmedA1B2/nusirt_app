@@ -79,22 +79,27 @@ class _SideMenuState extends State<SideMenu> {
                         MaterialButton(
                           padding: const EdgeInsets.all(0),
                           onPressed: () {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Container(
-                                  padding: const EdgeInsets.all(14),
-                                  height: 90,
-                                  decoration: BoxDecoration(
-                                    color: colorbody,
-                                    borderRadius: BorderRadius.circular(20),
+                            if (sharedPref.getString("tlogin").toString() ==
+                                "1") {
+                              Navigator.of(context).pushNamed("lecture");
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Container(
+                                    padding: const EdgeInsets.all(14),
+                                    height: 90,
+                                    decoration: BoxDecoration(
+                                      color: colorbody,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: const CustomSnackBar(),
                                   ),
-                                  child: const CustomSnackBar(),
+                                  behavior: SnackBarBehavior.floating,
+                                  backgroundColor: Colors.transparent,
+                                  elevation: 0,
                                 ),
-                                behavior: SnackBarBehavior.floating,
-                                backgroundColor: Colors.transparent,
-                                elevation: 0,
-                              ),
-                            );
+                              );
+                            }
                           },
                           child: CustomItmeMenu(
                             textMeun: onlineLectures,

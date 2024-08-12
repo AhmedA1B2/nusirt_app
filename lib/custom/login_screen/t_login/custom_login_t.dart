@@ -45,6 +45,7 @@ class _LoginForTState extends State<LoginForT> {
         sharedPref.setString("pass", response['data']['pass'].toString());
         sharedPref.setString("emil", response['data']['emil'].toString());
         sharedPref.setString("id", response['data']['id_te'].toString());
+        sharedPref.setString("tlogin", "1");
         // ignore: use_build_context_synchronously
         Navigator.of(context)
             .pushNamedAndRemoveUntil("homet", (route) => false);

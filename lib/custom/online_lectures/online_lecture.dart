@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/item_q_data.dart';
-import 'package:sirte_university/custom/home_screen/widget/logedin_t/mark_view/mark.dart';
 import 'package:sirte_university/vars/color.dart';
 
 class OnlineLecture extends StatelessWidget {
