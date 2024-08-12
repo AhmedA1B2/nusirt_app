@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:sirte_university/custom/home_screen/app_home_loged_t.dart';
 import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/size.dart';
 

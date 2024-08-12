@@ -3,7 +3,6 @@ import 'package:sirte_university/api/links.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/item_q_data.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/q_data.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/item_data_c.dart';
-import 'package:sirte_university/custom/home_screen/widget/logedin/custom/item_data_m.dart';
 import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
 
