@@ -64,7 +64,6 @@ class _SupportState extends State<Support> {
             desc: 'شكرا لملاحظتك أنت تساعدنا حقا في تحسين التجربة للمستخدم',
           ).show();
         } else {
-          // ignore: use_build_context_synchronously
           AwesomeDialog(
             // ignore: use_build_context_synchronously
             context: context,
@@ -121,7 +120,7 @@ class _SupportState extends State<Support> {
                             child: CustomTextFormField(
                               hintText: "أكتب مشكلتك هنا",
                               con: support,
-                              fillColor: colorbody,
+                              fillColor: bgColor,
                             ),
                           ),
                           const SizedBox(

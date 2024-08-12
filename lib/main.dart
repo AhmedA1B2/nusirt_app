@@ -5,10 +5,10 @@ import 'package:sirte_university/custom/Menu/custom/translation.dart';
 import 'package:sirte_university/custom/Menu/side_menu.dart';
 import 'package:sirte_university/custom/home_screen/app_home.dart';
 import 'package:sirte_university/custom/home_screen/app_home_loged_s.dart';
+import 'package:sirte_university/custom/home_screen/app_home_loged_t.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/custom/library/library.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/more_st.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/personal_screen_s.dart';
-import 'package:sirte_university/custom/home_screen/widget/logedin_t/mark_view/mark.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin_t/mark_view/widget/input/in_mark.dart';
 import 'package:sirte_university/custom/login_screen/s_login/custom_login.dart';
 import 'package:sirte_university/custom/login_screen/options_to_login.dart';
@@ -344,11 +344,12 @@ class _MyAppState extends State<MyApp> {
     SizeConfig().init(context);
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Rubik'),
-      home: const Mark(),
+      home: const Welcome(), //Mark(),
       routes: {
         "logn": (context) => const LoginForm(),
         "home": (context) => const HomeScreen(),
         "homes": (context) => const HomeScreenLoged(),
+        "homet": (context) => const HomeScreenLogedT(),
         "op": (context) => const OptionToLogin(),
         "support": (context) => const Support(),
         "libary": (context) => const Library(),

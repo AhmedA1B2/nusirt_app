@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sirte_university/License/license.dart';
 import 'package:sirte_university/custom/home_screen/app_home.dart';
 import 'package:sirte_university/custom/login_screen/s_login/custom_login.dart';
+import 'package:sirte_university/custom/login_screen/t_login/custom_login_t.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_option/ConBorder.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_option/button.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_option/s_logo.dart';
@@ -116,15 +117,15 @@ class _OptionToLoginState extends State<OptionToLogin> {
                         color: bgColor,
                         minWidth: SizeConfig.screenWidth! * 0.6,
                         onPressed: () {
-                          //   setState(() {
-                          //     onPr();
-                          //   });
-                          //   Future.delayed(const Duration(milliseconds: 300), () {
-                          //     Navigator.push(
-                          //         context,
-                          //         MaterialPageRoute(
-                          //             builder: (context) => const LoginForT()));
-                          //   });
+                          setState(() {
+                            onPr();
+                          });
+                          Future.delayed(const Duration(milliseconds: 300), () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginForT()));
+                          });
                         },
                         child: ButtonOpLog(
                           butext: employee,

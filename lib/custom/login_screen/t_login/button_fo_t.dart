@@ -12,28 +12,20 @@ class ButtonFormT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return TextButton(
-      onPressed: () {
-        Get.to(
-          () => const HomeScreenLogedT(),
-          transition: Transition.cupertinoDialog,
-        );
-      },
-      child: Container(
-        height: SizeConfig.defaultSize! * 4,
-        width: SizeConfig.defaultSize! * 12,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: colorwhite, width: 2),
-          color: bgColor,
-        ),
-        child: Center(
-          child: Text(
-            btf,
-            style: TextStyle(
-              color: colorwhite,
-              fontWeight: FontWeight.bold,
-            ),
+    return Container(
+      height: SizeConfig.defaultSize! * 4,
+      width: SizeConfig.defaultSize! * 12,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: colorwhite, width: 2),
+        color: bgColor,
+      ),
+      child: Center(
+        child: Text(
+          btf,
+          style: TextStyle(
+            color: colorwhite,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
