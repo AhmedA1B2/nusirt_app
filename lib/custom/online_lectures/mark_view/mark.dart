@@ -5,6 +5,7 @@ import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthna
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/custom_mark_card.dart';
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/custom_view_st_mark.dart';
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/edit_delete.dart';
+import 'package:sirte_university/custom/online_lectures/mark_view/widget/edit/edit_mark.dart';
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/input/in_mada.dart';
 import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
@@ -78,15 +79,61 @@ class _MarkState extends State<Mark> {
                                     children: [
                                       MaterialButton(
                                         padding: const EdgeInsets.all(0),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          AwesomeDialog(
+                                            context: context,
+                                            dialogType: DialogType.infoReverse,
+                                            animType: AnimType.rightSlide,
+                                            title: 'تعديل',
+                                            desc:
+                                                "هل تريد تعديل بيانات الطالب؟",
+                                            btnOkOnPress: () {
+                                              Navigator.of(context).push(
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          EditMark(
+                                                            stData:
+                                                                snapshot.data[
+                                                                    'data'][i],
+                                                          )));
+                                            },
+                                            btnOkColor: bgColor,
+                                          ).show();
+                                        },
                                         child: EditDelete(
                                           icon: Icons.edit,
                                           color: bgColor,
                                         ),
                                       ),
-                                      EditDelete(
-                                        icon: Icons.delete,
-                                        color: eroorColor,
+                                      MaterialButton(
+                                        padding: const EdgeInsets.all(0),
+                                        onPressed: () {
+                                          AwesomeDialog(
+                                            context: context,
+                                            dialogType: DialogType.warning,
+                                            animType: AnimType.scale,
+                                            title: 'حذف',
+                                            desc:
+                                                "تحذير لن يتم الحذف بشكل كامل فقط سيتم حذفه من عندك",
+                                            btnOkOnPress: () async {
+                                              var response = await crud
+                                                  .postRequest(linkDeleteMark, {
+                                                "id": snapshot.data['data'][i]
+                                                        ['id']
+                                                    .toString()
+                                              });
+                                              if (response['status'] ==
+                                                  "success") {
+                                                setState(() {});
+                                              }
+                                            },
+                                            btnOkColor: eroorColor,
+                                          ).show();
+                                        },
+                                        child: EditDelete(
+                                          icon: Icons.delete,
+                                          color: eroorColor,
+                                        ),
                                       )
                                     ],
                                   ),
