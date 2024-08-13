@@ -9,7 +9,8 @@ class CustomTextFormField extends StatelessWidget {
     this.inputType,
     this.onChanged,
     this.onSaved,
-    required this.con, required this.fillColor,
+    required this.con,
+    required this.fillColor,
   });
 
   final String hintText;
@@ -34,11 +35,12 @@ class CustomTextFormField extends StatelessWidget {
 
         decoration: InputDecoration(
           //########focuse########//
-          focusedBorder:  OutlineInputBorder(
-              borderSide: BorderSide(color: colorbody)),
+          focusedBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: colorbody)),
           // ####### Hint ####### //
           hintText: hintText,
-          hintStyle:  TextStyle(
+          hoverColor: bgColor,
+          hintStyle: TextStyle(
             color: colorwhite,
             fontWeight: FontWeight.bold,
           ),

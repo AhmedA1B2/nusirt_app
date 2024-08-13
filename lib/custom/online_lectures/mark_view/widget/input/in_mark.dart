@@ -71,53 +71,64 @@ class _InMarkState extends State<InMark> {
             height: 12,
           ),
           const LogoLogin(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              textDirection: TextDirection.rtl,
-              children: [
-                SizedBox(
-                  width: SizeConfig.screenWidth! * 0.9,
-                  child: CustomTextFormField(
-                    hintText: "رقم القيد",
-                    con: conNum,
-                    fillColor: colorbody,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: SizedBox(
-                    width: SizeConfig.screenWidth! * 0.8,
-                    child: CustomTextFormField(
-                        hintText: "درجة العملي",
-                        con: conAmly,
-                        inputType: TextInputType.number,
-                        fillColor: colorbody),
-                  ),
-                ),
-                SizedBox(
-                  width: SizeConfig.screenWidth! * 0.8,
-                  child: CustomTextFormField(
-                    hintText: "درجة النصفي",
-                    con: conNasfy,
-                    inputType: TextInputType.number,
-                    fillColor: colorbody,
-                  ),
-                ),
-              ],
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(22),
+              color: Colors.white,
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: MaterialButton(
-              height: 50,
-              color: bgColor,
-              minWidth: SizeConfig.screenWidth! * 0.6,
-              onPressed: () {
-                addMark();
-              },
-              child: const ButtonOpLog(
-                butext: "ادخال",
+            height: SizeConfig.screenHeight! * 0.5,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Column(
+                  children: [
+                    const Spacer(),
+                    SizedBox(
+                      width: SizeConfig.screenWidth! * 0.9,
+                      child: CustomTextFormField(
+                        hintText: "رقم القيد",
+                        con: conNum,
+                        fillColor: bgColor,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: SizedBox(
+                        width: SizeConfig.screenWidth! * 0.8,
+                        child: CustomTextFormField(
+                            hintText: "درجة العملي",
+                            con: conAmly,
+                            inputType: TextInputType.number,
+                            fillColor: bgColor),
+                      ),
+                    ),
+                    SizedBox(
+                      width: SizeConfig.screenWidth! * 0.8,
+                      child: CustomTextFormField(
+                        hintText: "درجة النصفي",
+                        con: conNasfy,
+                        inputType: TextInputType.number,
+                        fillColor: bgColor,
+                      ),
+                    ),
+                    const Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.all(18.0),
+                      child: MaterialButton(
+                        height: 50,
+                        color: bgColor,
+                        minWidth: SizeConfig.screenWidth! * 0.6,
+                        onPressed: () {
+                          addMark();
+                        },
+                        child: const ButtonOpLog(
+                          butext: "ادخال",
+                        ),
+                      ),
+                    ),
+                    const Spacer(),
+                  ],
+                ),
               ),
             ),
           ),
