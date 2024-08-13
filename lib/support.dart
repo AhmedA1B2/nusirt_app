@@ -89,13 +89,17 @@ class _SupportState extends State<Support> {
           : Center(
               child: ListView(
                 children: [
-                  const SizedBox(
-                    height: 60,
-                  ),
-                  const HeroMode(
-                    child: Hero(
-                      tag: "sirte",
-                      child: LogoLogin(),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: bgColor,
+                      borderRadius: const BorderRadius.vertical(
+                          bottom: Radius.circular(120)),
+                    ),
+                    child: const HeroMode(
+                      child: Hero(
+                        tag: "sirte",
+                        child: LogoLogin(),
+                      ),
                     ),
                   ),
                   Card(
@@ -104,16 +108,20 @@ class _SupportState extends State<Support> {
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Column(
                         children: [
-                          Text(
-                            mysupport,
-                            style: TextStyle(
-                              color: bgColor,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 36,
+                          Padding(
+                            padding: const EdgeInsets.all(40.0),
+                            child: Text(
+                              mysupport,
+                              style: TextStyle(
+                                  color: bgColor,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 36,
+                                  shadows: const [
+                                    Shadow(
+                                        color: Colors.black26,
+                                        offset: Offset(2, 2))
+                                  ]),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 80,
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),

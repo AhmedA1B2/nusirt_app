@@ -2,9 +2,9 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:sirte_university/api/links.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/q_data.dart';
-import 'package:sirte_university/custom/home_screen/widget/logedin_t/mark_view/widget/custom/edit_delete.dart';
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/custom_mark_card.dart';
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/custom_view_st_mark.dart';
+import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/edit_delete.dart';
 import 'package:sirte_university/custom/online_lectures/mark_view/widget/input/in_mada.dart';
 import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
@@ -16,7 +16,6 @@ getStudent() async {
 
   return response;
 }
-
 
 class Mark extends StatefulWidget {
   const Mark({super.key});
@@ -70,38 +69,42 @@ class _MarkState extends State<Mark> {
                     child: ListView.builder(
                         itemCount: snapshot.data['data'].length,
                         itemBuilder: (context, i) {
-                          return Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    MaterialButton(
-                                      padding: const EdgeInsets.all(0),
-                                      onPressed: () {
-                                        
-                                      },
-                                      child: EditDelete(
-                                        icon: Icons.edit,
-                                        color: bgColor,
+                          return Card(
+                            child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      MaterialButton(
+                                        padding: const EdgeInsets.all(0),
+                                        onPressed: () {},
+                                        child: EditDelete(
+                                          icon: Icons.edit,
+                                          color: bgColor,
+                                        ),
                                       ),
-                                    ),
-                                    EditDelete(
-                                      icon: Icons.delete,
-                                      color: eroorColor,
-                                    )
-                                  ],
+                                      EditDelete(
+                                        icon: Icons.delete,
+                                        color: eroorColor,
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              ViewStMark(
-                                textNum: '${snapshot.data['data'][i]['num']}',
-                                textMada: '${snapshot.data['data'][i]['m']}',
-                                textAmly:
-                                    '${snapshot.data['data'][i]['damly']}',
-                                textNsfy:
-                                    '${snapshot.data['data'][i]['dnsfy']}',
-                              ),
-                            ],
+                                Expanded(
+                                  child: ViewStMark(
+                                    textNum:
+                                        '${snapshot.data['data'][i]['num']}',
+                                    textMada:
+                                        '${snapshot.data['data'][i]['m']}',
+                                    textAmly:
+                                        '${snapshot.data['data'][i]['damly']}',
+                                    textNsfy:
+                                        '${snapshot.data['data'][i]['dnsfy']}',
+                                  ),
+                                ),
+                              ],
+                            ),
                           );
                         }),
                   )
