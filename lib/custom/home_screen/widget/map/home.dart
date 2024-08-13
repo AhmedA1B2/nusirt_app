@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:sirte_university/custom/check_internet/check/checknit.dart';
+import 'package:sirte_university/custom/check_internet/lodign/loding.dart';
 import 'package:sirte_university/custom/check_internet/ui_nonit/no_nit.dart';
 import 'package:sirte_university/custom/home_screen/widget/map/custom/app_bar_textbutton.dart';
 import 'package:sirte_university/vars/color.dart';
@@ -541,9 +542,7 @@ class _HomeMapState extends State<HomeMap> {
   @override
   Widget build(BuildContext context) {
     return isLoding == true
-        ? const Center(
-            child: CircularProgressIndicator(),
-          )
+        ? const Loding()
         : net == false
             ? MaterialButton(
                 padding: const EdgeInsets.all(0),

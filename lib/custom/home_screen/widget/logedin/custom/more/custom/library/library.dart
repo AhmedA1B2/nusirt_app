@@ -110,9 +110,19 @@ class _LibraryState extends State<Library> {
                           });
                     }
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Center(child: Text("if --> Loading ..."));
+                      return const Center(
+                          child: Text(
+                        "Loading ...",
+                      ));
                     }
-                    return const Center(child: Text("else --> Loading ..."));
+                    return MaterialButton(
+                        onPressed: () {
+                          setState(() {});
+                        },
+                        child: const Center(
+                            child: Text(
+                          "خطأ في الأتصال أنقر لاعادة المحاوله",
+                        )));
                   }),
               const LibaryLine(
                 textLine: 'لم يتم القبول',
@@ -171,9 +181,19 @@ class _LibraryState extends State<Library> {
                           });
                     }
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Center(child: Text("if --> Loading ..."));
+                      return const Center(
+                          child: Text(
+                        "Loading ...",
+                      ));
                     }
-                    return const Center(child: Text("else --> Loading ..."));
+                    return MaterialButton(
+                        onPressed: () {
+                          setState(() {});
+                        },
+                        child: const Center(
+                            child: Text(
+                          "خطأ في الأتصال أنقر لاعادة المحاوله",
+                        )));
                   }),
 
               //
@@ -256,9 +276,19 @@ class _LibraryState extends State<Library> {
                           });
                     }
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Center(child: Text("if --> Loading ..."));
+                      return const Center(
+                          child: Text(
+                        "Loading ...",
+                      ));
                     }
-                    return const Center(child: Text("else --> Loading ..."));
+                    return MaterialButton(
+                        onPressed: () {
+                          setState(() {});
+                        },
+                        child: const Center(
+                            child: Text(
+                          "خطأ في الأتصال أنقر لاعادة المحاوله",
+                        )));
                   }),
             ],
           ),

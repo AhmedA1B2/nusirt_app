@@ -12,6 +12,7 @@ class _NoNitState extends State<NoNit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +32,7 @@ class _NoNitState extends State<NoNit> {
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
-                color: bgColor,
+                color: colorwhite,
               ),
             ),
             Text(
@@ -39,7 +40,7 @@ class _NoNitState extends State<NoNit> {
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
-                color: bgColor,
+                color: colorwhite,
               ),
             ),
           ],

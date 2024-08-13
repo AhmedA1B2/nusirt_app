@@ -2,6 +2,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:sirte_university/api/crud.dart';
 import 'package:sirte_university/api/links.dart';
+import 'package:sirte_university/custom/check_internet/lodign/loding.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_login/button_out_form.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_login/logo.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_login/txet_form_field.dart';
@@ -70,9 +71,7 @@ class _LoginFormState extends State<LoginForm> {
     SizeConfig().init(context);
     return Scaffold(
       body: isLoding == true
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
+          ? const Loding()
           : ListView(
               children: [
                 const HeroMode(

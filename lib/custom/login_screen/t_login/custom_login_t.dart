@@ -2,6 +2,7 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:sirte_university/api/crud.dart';
 import 'package:sirte_university/api/links.dart';
+import 'package:sirte_university/custom/check_internet/lodign/loding.dart';
 import 'package:sirte_university/custom/login_screen/t_login/button_fo_t.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_login/txet_form_field.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_option/ConBorder.dart';
@@ -68,49 +69,51 @@ class _LoginForTState extends State<LoginForT> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      body: ListView(
-        children: [
-          const SmoleLogo(),
-          ConBorder(
-            inConB: Column(
+      body: isLoding == true
+          ? const Loding()
+          : ListView(
               children: [
-                const TextOpLog(),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CustomTextFormField(
-                    hintText: "البريد الالكتروني",
-                    con: emil,
-                    fillColor: bgColor,
+                const SmoleLogo(),
+                ConBorder(
+                  inConB: Column(
+                    children: [
+                      const TextOpLog(),
+                      const Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CustomTextFormField(
+                          hintText: "البريد الالكتروني",
+                          con: emil,
+                          fillColor: bgColor,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: CustomTextFormField(
+                          hintText: "كلمة المرور",
+                          con: pass,
+                          fillColor: bgColor,
+                        ),
+                      ),
+                      const Spacer(),
+                      MaterialButton(
+                        padding: const EdgeInsets.all(0),
+                        onPressed: () {
+                          login();
+                        },
+                        child: const ButtonFormT(
+                          btf: 'دخول',
+                        ),
+                      ),
+                      const Spacer(),
+                    ],
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CustomTextFormField(
-                    hintText: "كلمة المرور",
-                    con: pass,
-                    fillColor: bgColor,
-                  ),
-                ),
-                const Spacer(),
-                MaterialButton(
-                  padding: const EdgeInsets.all(0),
-                  onPressed: () {
-                    login();
-                  },
-                  child: const ButtonFormT(
-                    btf: 'دخول',
-                  ),
-                ),
-                const Spacer(),
               ],
             ),
-          ),
-        ],
-      ),
     );
   }
 }

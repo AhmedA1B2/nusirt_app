@@ -346,7 +346,7 @@ class _MyAppState extends State<MyApp> {
     SizeConfig().init(context);
     return GetMaterialApp(
       theme: ThemeData(fontFamily: 'Rubik'),
-      home: const Welcome(), 
+      home: const Welcome(),
       routes: {
         "logn": (context) => const LoginForm(),
         "home": (context) => const HomeScreen(),

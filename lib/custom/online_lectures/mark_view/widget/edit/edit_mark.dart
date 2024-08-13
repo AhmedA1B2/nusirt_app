@@ -5,7 +5,6 @@ import 'package:sirte_university/api/links.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_login/logo.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_login/txet_form_field.dart';
 import 'package:sirte_university/custom/login_screen/widget_for_option/button.dart';
-import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/size.dart';
 

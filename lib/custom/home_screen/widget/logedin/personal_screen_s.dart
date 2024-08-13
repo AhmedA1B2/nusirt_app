@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sirte_university/api/crud.dart';
 import 'package:sirte_university/api/links.dart';
+import 'package:sirte_university/custom/check_internet/ui_nonit/no_nit.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/item_q_data.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/q_data.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/item_data_c.dart';
@@ -178,6 +179,7 @@ class _PersonalScreenState extends State<PersonalScreenS> {
                                   qText: 'النتائج النهائية',
                                   backCo: colorwhite,
                                   textCo: bgColor,
+                                  icon: Icons.filter_frames_rounded,
                                 ),
                               ),
                               MaterialButton(
@@ -212,11 +214,7 @@ class _PersonalScreenState extends State<PersonalScreenS> {
                 onPressed: () {
                   setState(() {});
                 },
-                child: Center(
-                    child: Text(
-                  "خطأ في الأتصال أنقر لاعادة المحاوله",
-                  style: TextStyle(color: colorwhite),
-                )));
+                child: const NoNit());
           }),
     );
   }
