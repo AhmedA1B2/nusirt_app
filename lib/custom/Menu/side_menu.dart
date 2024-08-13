@@ -103,7 +103,7 @@ class _SideMenuState extends State<SideMenu> {
                           },
                           child: CustomItmeMenu(
                             textMeun: onlineLectures,
-                            iconMenu: Icons.live_tv,
+                            iconMenu: Icons.cloud_sharp,
                           ),
                         ),
                         MaterialButton(
