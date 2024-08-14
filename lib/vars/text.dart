@@ -15,7 +15,7 @@ String guestOption = "ضيف";
 
 String universityOfSirte = "جامعة سرت  ";
 String erorrLog = "يجب تسجيل الدخول لعرض هذه الصفحة";
-//en => University of Sirte
+//en =>Sirte University
 
 //<< guest
 
@@ -175,7 +175,7 @@ String harawa = 'فرع زمزم';
 
 //menu>>
 
-String onlineLectures = "محاضرات أون لاين";
+String onlineLectures = "محاضرات ";
 // en => Online lectures
 
 String mysupport = "الدعم";

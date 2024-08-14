@@ -94,12 +94,7 @@ class _SupportState extends State<Support> {
                       borderRadius: const BorderRadius.vertical(
                           bottom: Radius.circular(120)),
                     ),
-                    child: const HeroMode(
-                      child: Hero(
-                        tag: "sirte",
-                        child: LogoLogin(),
-                      ),
-                    ),
+                    child: const LogoLogin(),
                   ),
                   Card(
                     color: colorwhite,

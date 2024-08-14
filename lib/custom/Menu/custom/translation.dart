@@ -33,7 +33,7 @@ class _TranslationState extends State<Translation> {
 
   guest() {
     if (arEn == 0.0) {
-      universityOfSirte = "University of Sirte";
+      universityOfSirte = "Sirte University";
       erorrLog = "You must be logged in to view this page";
     } else if (arEn == 1.0) {
       universityOfSirte = "جامعة سرت  ";
@@ -235,13 +235,13 @@ class _TranslationState extends State<Translation> {
 
   menu() {
     if (arEn == 0.0) {
-      onlineLectures = "Online lectures";
+      onlineLectures = "lectures";
       ai = "AI";
       mysupport = "Support";
       theme = "Theme";
       language = "Language";
     } else if (arEn == 1.0) {
-      onlineLectures = "محاضرات أون لاين";
+      onlineLectures = "محاضرات";
       ai = "ذكاء اصطناعي";
       mysupport = "الدعم";
       theme = "سمة";

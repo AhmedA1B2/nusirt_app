@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sirte_university/custom/online_lectures/mark_view/widget/custom/texts_for_view.dart';
+import 'package:sirte_university/custom/online_lectures_for_te/mark_view/widget/custom/texts_for_view.dart';
 import 'package:sirte_university/vars/color.dart';
 
 class ViewStMark extends StatelessWidget {

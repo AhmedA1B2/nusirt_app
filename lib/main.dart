@@ -9,11 +9,13 @@ import 'package:sirte_university/custom/home_screen/app_home_loged_t.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/custom/library/library.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/more_st.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/personal_screen_s.dart';
-import 'package:sirte_university/custom/online_lectures/mark_view/mark.dart';
-import 'package:sirte_university/custom/online_lectures/mark_view/widget/input/in_mark.dart';
+import 'package:sirte_university/custom/online_lectures_for_st/mark_view/show_mark.dart';
+import 'package:sirte_university/custom/online_lectures_for_te/mark_view/widget/input/in_mark.dart';
+import 'package:sirte_university/custom/online_lectures_for_te/online_lecture.dart';
+import 'package:sirte_university/custom/online_lectures_for_st/online_lecture.dart';
+import 'package:sirte_university/custom/online_lectures_for_te/mark_view/mark.dart';
 import 'package:sirte_university/custom/login_screen/s_login/custom_login.dart';
 import 'package:sirte_university/custom/login_screen/options_to_login.dart';
-import 'package:sirte_university/custom/online_lectures/online_lecture.dart';
 import 'package:sirte_university/custom/splash_screen/custom_splash_screen.dart';
 import 'package:sirte_university/support.dart';
 import 'package:sirte_university/vars/color.dart';
@@ -79,7 +81,7 @@ class _MyAppState extends State<MyApp> {
 
   guest() {
     if (arEn == 0.0) {
-      universityOfSirte = "University of Sirte";
+      universityOfSirte = "Sirte University";
       erorrLog = "You must be logged in to view this page";
     } else if (arEn == 1.0) {
       universityOfSirte = "جامعة سرت  ";
@@ -281,13 +283,13 @@ class _MyAppState extends State<MyApp> {
 
   menu() {
     if (arEn == 0.0) {
-      onlineLectures = "Online lectures";
+      onlineLectures = "lectures";
       ai = "AI";
       mysupport = "Support";
       theme = "Theme";
       language = "Language";
     } else if (arEn == 1.0) {
-      onlineLectures = "محاضرات أون لاين";
+      onlineLectures = "محاضرات";
       ai = "ذكاء اصطناعي";
       mysupport = "الدعم";
       theme = "سمة";
@@ -358,8 +360,10 @@ class _MyAppState extends State<MyApp> {
         "MoreSt": (context) => const MoreSt(),
         "PersonalScreenS": (context) => const PersonalScreenS(),
         "lecture": (context) => const OnlineLecture(),
+        "lectures": (context) => const OnlineLectureSt(),
         "mark": (context) => const Mark(),
-        "inMark": (context) => const InMark()
+        "inMark": (context) => const InMark(),
+        "showmark": (context) => const ShowMark(),
       },
     );
   }

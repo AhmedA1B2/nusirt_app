@@ -48,6 +48,7 @@ class _LoginFormState extends State<LoginForm> {
         sharedPref.setString("pass", response['data']['pass'].toString());
         sharedPref.setString("num", response['data']['num'].toString());
         sharedPref.setString("id", response['data']['id_st'].toString());
+        sharedPref.setString("slogin", "1");
         // ignore: use_build_context_synchronously
         Navigator.of(context)
             .pushNamedAndRemoveUntil("homes", (route) => false);

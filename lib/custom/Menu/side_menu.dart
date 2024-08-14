@@ -82,6 +82,10 @@ class _SideMenuState extends State<SideMenu> {
                             if (sharedPref.getString("tlogin").toString() ==
                                 "1") {
                               Navigator.of(context).pushNamed("lecture");
+                            }
+                            if (sharedPref.getString("slogin").toString() ==
+                                "1") {
+                              Navigator.of(context).pushNamed("lectures");
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
