@@ -16,8 +16,8 @@ class _ShowMarkState extends State<ShowMark> {
     return Scaffold(
       appBar: AppBar(),
       backgroundColor: bgColor,
-      body: const Column(
-        children: [
+      body: ListView(
+        children: const [
           SearchMada(),
           MarkView(),
         ],

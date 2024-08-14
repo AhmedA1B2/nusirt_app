@@ -4,6 +4,7 @@ import 'package:sirte_university/custom/check_internet/ui_nonit/no_nit.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/item_q_data.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/amthnat/q_data.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/item_data_c.dart';
+import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/more_st.dart';
 import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
 
@@ -134,11 +135,11 @@ class _PersonalScreenState extends State<PersonalScreenT> {
                               ),
                               MaterialButton(
                                 onPressed: () {
-                                  //Navigator.push(
-                                  //    context,
-                                  //    MaterialPageRoute(
-                                  //        builder: (context) =>
-                                  //            const MoreSt()));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const MoreSt()));
                                 },
                                 child: ItemQData(
                                   qText: 'المزيد من الخدمات',

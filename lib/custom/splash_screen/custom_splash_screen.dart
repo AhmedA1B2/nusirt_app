@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/shadow/text_shadow.dart';
-import 'package:sirte_university/vars/text.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});

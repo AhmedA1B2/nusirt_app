@@ -5,6 +5,7 @@ import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/c
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/custom/library/custom/app_bar_text.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/custom/library/library.dart';
 import 'package:sirte_university/custom/home_screen/widget/logedin/custom/more/custom/page_in_more_papre.dart';
+import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/message.dart';
 
@@ -25,10 +26,17 @@ class _MoreStState extends State<MoreSt> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                  'homes',
-                  (route) => false,
-                );
+                if (sharedPref.getString("tlogin").toString() == "1") {
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    'homet',
+                    (route) => false,
+                  );
+                } else if (sharedPref.getString("slogin").toString() == "1") {
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    'homes',
+                    (route) => false,
+                  );
+                }
               },
               icon: const Icon(Icons.arrow_back)),
           const Spacer(),
@@ -47,10 +55,29 @@ class _MoreStState extends State<MoreSt> {
           MaterialButton(
             padding: const EdgeInsets.all(0),
             onPressed: () {
-              Get.to(
-                () => const PageInMorePapre(),
-                transition: Transition.fade,
-              );
+              if (sharedPref.getString("tlogin").toString() == "1") {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Container(
+                      padding: const EdgeInsets.all(14),
+                      height: 90,
+                      decoration: BoxDecoration(
+                        color: colorbody,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const CustomSnackBar(),
+                    ),
+                    behavior: SnackBarBehavior.floating,
+                    backgroundColor: Colors.transparent,
+                    elevation: 0,
+                  ),
+                );
+              } else if (sharedPref.getString("slogin").toString() == "1") {
+                Get.to(
+                  () => const PageInMorePapre(),
+                  transition: Transition.fade,
+                );
+              }
             },
             child: const ItmeInMore(
               iconInItmeMore: Icons.my_library_books,

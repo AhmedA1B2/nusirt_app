@@ -23,22 +23,41 @@ class _LibaryInputState extends State<LibaryInput> {
     if (textEditingController.text != "") {
       isLoading = true;
       setState(() {});
-      var response = await crud.postRequest(linkaddhgz, {
-        "name": sharedPref.getString("name").toString(),
-        "num": sharedPref.getString("num").toString(),
-        "college": sharedPref.getString("college").toString(),
-        "book": textEditingController.text,
-        "id_add": sharedPref.getString("id").toString(),
-        "date": "${DateTime.now().month}/${DateTime.now().day}"
-      });
-      isLoading = false;
-      setState(() {});
-      // ignore: use_build_context_synchronously
-      Navigator.of(context).pushNamedAndRemoveUntil(
-        'libary',
-        (route) => false,
-      );
-      if (response['status' == "success"]) {}
+      if (sharedPref.getString("slogin").toString() == "1") {
+        var response = await crud.postRequest(linkaddhgz, {
+          "name": sharedPref.getString("name").toString(),
+          "num": sharedPref.getString("num").toString(),
+          "college": sharedPref.getString("college").toString(),
+          "book": textEditingController.text,
+          "id_add": sharedPref.getString("id").toString(),
+          "date": "${DateTime.now().month}/${DateTime.now().day}"
+        });
+        isLoading = false;
+        setState(() {});
+        // ignore: use_build_context_synchronously
+        Navigator.of(context).pushNamedAndRemoveUntil(
+          'libary',
+          (route) => false,
+        );
+        if (response['status' == "success"]) {}
+      } else {
+        var response = await crud.postRequest(linkaddhgz, {
+          "name": sharedPref.getString("name").toString(),
+          "num": sharedPref.getString("emil").toString(),
+          "college": sharedPref.getString("college").toString(),
+          "book": textEditingController.text,
+          "id_add": sharedPref.getString("id").toString(),
+          "date": "${DateTime.now().month}/${DateTime.now().day}"
+        });
+        isLoading = false;
+        setState(() {});
+        // ignore: use_build_context_synchronously
+        Navigator.of(context).pushNamedAndRemoveUntil(
+          'libary',
+          (route) => false,
+        );
+        if (response['status' == "success"]) {}
+      }
     } else {
       AwesomeDialog(
         context: context,

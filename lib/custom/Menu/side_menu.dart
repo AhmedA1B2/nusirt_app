@@ -4,6 +4,7 @@ import 'package:sirte_university/custom/Menu/custom/translation.dart';
 import 'package:sirte_university/main.dart';
 import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/message.dart';
+import 'package:sirte_university/vars/message2.dart';
 import 'package:sirte_university/vars/size.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirte_university/vars/text.dart';
@@ -82,8 +83,9 @@ class _SideMenuState extends State<SideMenu> {
                             if (sharedPref.getString("tlogin").toString() ==
                                 "1") {
                               Navigator.of(context).pushNamed("lecture");
-                            }
-                            if (sharedPref.getString("slogin").toString() ==
+                            } else if (sharedPref
+                                    .getString("slogin")
+                                    .toString() ==
                                 "1") {
                               Navigator.of(context).pushNamed("lectures");
                             } else {
@@ -96,7 +98,7 @@ class _SideMenuState extends State<SideMenu> {
                                       color: colorbody,
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    child: const CustomSnackBar(),
+                                    child: const CustomSnackBar2(),
                                   ),
                                   behavior: SnackBarBehavior.floating,
                                   backgroundColor: Colors.transparent,
