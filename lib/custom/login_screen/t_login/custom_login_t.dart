@@ -68,23 +68,27 @@ class _LoginForTState extends State<LoginForT> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: colorwhite,
       body: isLoding == true
           ? const Loding()
           : ListView(
               children: [
                 const SmoleLogo(),
                 ConBorder(
+                  color: bgColor,
                   inConB: Column(
                     children: [
-                      const TextOpLog(),
+                      TextOpLog(
+                        color: colorwhite,
+                      ),
                       const Spacer(),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: CustomTextFormField(
                           hintText: "البريد الالكتروني",
                           con: emil,
-                          fillColor: bgColor,
+                          fillColor: colorwhite,
+                          hintColor: bgColor,
                         ),
                       ),
                       const SizedBox(
@@ -95,7 +99,8 @@ class _LoginForTState extends State<LoginForT> {
                         child: CustomTextFormField(
                           hintText: "كلمة المرور",
                           con: pass,
-                          fillColor: bgColor,
+                          fillColor: colorwhite,
+                          hintColor: bgColor,
                         ),
                       ),
                       const Spacer(),

@@ -85,9 +85,12 @@ class _OptionToLoginState extends State<OptionToLogin> {
 
               // End  S IMG
               ConBorder(
+                color: colorwhite,
                 inConB: Column(
                   children: [
-                    const TextOpLog(),
+                    TextOpLog(
+                      color: bgColor,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(18.0),
                       child: MaterialButton(

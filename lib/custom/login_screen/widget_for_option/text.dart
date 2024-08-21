@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/text.dart';
 
 class TextOpLog extends StatelessWidget {
-  const TextOpLog({super.key});
+  const TextOpLog({super.key, required this.color});
 
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,7 +16,7 @@ class TextOpLog extends StatelessWidget {
         signInOption,
         style: TextStyle(
           fontSize: 48,
-          color: bgColor,
+          color: color,
           fontWeight: FontWeight.bold,
         ),
       ),

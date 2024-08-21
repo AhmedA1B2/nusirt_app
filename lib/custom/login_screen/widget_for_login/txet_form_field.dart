@@ -11,6 +11,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onSaved,
     required this.con,
     required this.fillColor,
+    this.hintColor,
   });
 
   final String hintText;
@@ -19,6 +20,7 @@ class CustomTextFormField extends StatelessWidget {
   final ValueSetter? onSaved;
   final TextEditingController con;
   final Color fillColor;
+  final Color? hintColor;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ class CustomTextFormField extends StatelessWidget {
           hintText: hintText,
           hoverColor: bgColor,
           hintStyle: TextStyle(
-            color: colorwhite,
+            color: hintColor,
             fontWeight: FontWeight.bold,
           ),
           // ######## body ####### //
