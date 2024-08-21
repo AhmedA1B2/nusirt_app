@@ -45,7 +45,6 @@ const String linkEndhgz = "$linkServerName/hgzmktbh/admin/end.php";
 
 const String linkAddMark = "$linkServerName/n_exam/add.php";
 const String linkEditMark = "$linkServerName/n_exam/up.php";
-const String linkDeleteMark = "$linkServerName/n_exam/delete.php";
 const String linkViewteMark = "$linkServerName/n_exam/view_t.php";
 const String linkViewStMark = "$linkServerName/n_exam/view_s.php";
 const String linkSearchStMark = "$linkServerName/n_exam/search.php";

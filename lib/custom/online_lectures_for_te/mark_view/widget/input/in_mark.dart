@@ -64,7 +64,7 @@ class _InMarkState extends State<InMark> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      backgroundColor: bgColor,
+      backgroundColor: colorwhite,
       body: ListView(
         children: [
           const SizedBox(
@@ -72,9 +72,10 @@ class _InMarkState extends State<InMark> {
           ),
           const LogoLogin(),
           Container(
+            margin: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(22),
-              color: Colors.white,
+              color: bgColor,
             ),
             height: SizeConfig.screenHeight! * 0.5,
             child: Center(
@@ -88,7 +89,7 @@ class _InMarkState extends State<InMark> {
                       child: CustomTextFormField(
                         hintText: "رقم القيد",
                         con: conNum,
-                        fillColor: bgColor,
+                        fillColor: colorwhite,
                       ),
                     ),
                     Padding(
@@ -99,7 +100,7 @@ class _InMarkState extends State<InMark> {
                             hintText: "درجة العملي",
                             con: conAmly,
                             inputType: TextInputType.number,
-                            fillColor: bgColor),
+                            fillColor: colorwhite),
                       ),
                     ),
                     SizedBox(
@@ -108,7 +109,7 @@ class _InMarkState extends State<InMark> {
                         hintText: "درجة النصفي",
                         con: conNasfy,
                         inputType: TextInputType.number,
-                        fillColor: bgColor,
+                        fillColor: colorwhite,
                       ),
                     ),
                     const Spacer(),
