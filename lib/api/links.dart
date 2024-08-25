@@ -1,4 +1,4 @@
-const String linkServerName = "http://192.168.0.110/mydatabase";
+const String linkServerName = "http://192.168.0.112/mydatabase";
 
 //||--> Auth <--||//
 

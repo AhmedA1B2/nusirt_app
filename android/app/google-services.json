@@ -1,32 +1,13 @@
 {
   "project_info": {
-    "project_number": "270382161451",
-    "project_id": "flutter-us",
-    "storage_bucket": "flutter-us.appspot.com"
+    "project_number": "576513062373",
+    "project_id": "sirtunnotifications",
+    "storage_bucket": "sirtunnotifications.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:270382161451:android:818b4f4f437833f867546e",
-        "android_client_info": {
-          "package_name": "com.example.enter_sirte_university"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB4wizKK-Fn7DAdBQlH_TLyqj6aXPfGo64"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:270382161451:android:066f0110df2b55fe67546e",
+        "mobilesdk_app_id": "1:576513062373:android:445654dfb12c21b2b66b0c",
         "android_client_info": {
           "package_name": "com.example.sirte_university"
         }
@@ -34,26 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB4wizKK-Fn7DAdBQlH_TLyqj6aXPfGo64"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:270382161451:android:a7ac377651e1bbeb67546e",
-        "android_client_info": {
-          "package_name": "com.example.test_app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB4wizKK-Fn7DAdBQlH_TLyqj6aXPfGo64"
+          "current_key": "AIzaSyDq_B3EYV09amP4QE6zBZFKErppl7NkKg4"
         }
       ],
       "services": {

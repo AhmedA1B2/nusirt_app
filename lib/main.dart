@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,6 +18,7 @@ import 'package:sirte_university/custom/online_lectures_for_te/mark_view/mark.da
 import 'package:sirte_university/custom/login_screen/s_login/custom_login.dart';
 import 'package:sirte_university/custom/login_screen/options_to_login.dart';
 import 'package:sirte_university/custom/splash_screen/custom_splash_screen.dart';
+import 'package:sirte_university/firebase_options.dart';
 import 'package:sirte_university/support.dart';
 import 'package:sirte_university/vars/color.dart';
 import 'package:sirte_university/vars/size.dart';
@@ -26,6 +28,9 @@ late SharedPreferences sharedPref;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   sharedPref = await SharedPreferences.getInstance();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
